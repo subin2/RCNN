@@ -2,8 +2,10 @@
 Recurrent Convolutional Neural Network (RCNN) implementation using python-tensorflow.
 
 ## Library versions
-python 2.7\\
-numpy 1.12\\
+python 2.7
+
+numpy 1.12
+
 tensorflow 1.12
 
 ## Usage
