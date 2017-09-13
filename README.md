@@ -8,11 +8,13 @@ tensorflow 1.12
 
 ## Usage
 1. Import models.py
-    ~~~
-    import models
-    ~~~
+
+    ```
+    import models
+    ```
 2. Create an RCNN object
 
+    ```
     rcnn = models.RCNN(batch_size=128, 
                       width=1, # input shape \[batch, width, height, channel\]
                       height=1024, 
@@ -34,16 +36,16 @@ tensorflow 1.12
                       scale=1, offset=0.01, epsilon=0.01, 
                       decay=0.9, 
                       momentum=0.9)
-           
+    ```       
 3. Training
 
-    model.train(data=train_input, target=input_target) 
+    ```model.train(data=train_input, target=input_target) ```
 train_input should be in shape [batch_size, width, height, channel] and input_target in [batch_size, forward_layers[-1]].
 train function returns loss value.
 
 4. Test
 
-  model.test(data=test_input, target=test_target)
+  ```model.test(data=test_input, target=test_target)```
 train_input should be in shape [batch_size, width, height, channel] and input_target in [batch_size, forward_layers[-1]].
 test function returns test input's loss value without updating parameters.
 
@@ -54,10 +56,12 @@ This returns the output values.
 
 6. Save and load the model.
 
+  ```
   model.save(save_path)
   model.load(load_path)
+  ```
 
 7. Terminate the model.
   
-  model.terminate()
+  ```model.terminate()```
 terminate() function closes the session and calls tf.reset_default_graph()
