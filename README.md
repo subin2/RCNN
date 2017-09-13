@@ -67,5 +67,7 @@ This returns the output values.
 
 7. Terminate the model.
   
-  ```model.terminate()```
+  ```
+  model.terminate()
+  ```
 terminate() function closes the session and calls tf.reset_default_graph()
