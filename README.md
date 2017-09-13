@@ -39,13 +39,17 @@ tensorflow 1.12
     ```       
 3. Training
 
-    ```model.train(data=train_input, target=input_target) ```
+    ```
+    model.train(data=train_input, target=input_target) 
+    ```
 train_input should be in shape [batch_size, width, height, channel] and input_target in [batch_size, forward_layers[-1]].
 train function returns loss value.
 
 4. Test
 
-  ```model.test(data=test_input, target=test_target)```
+  ```
+  model.test(data=test_input, target=test_target)
+  ```
 train_input should be in shape [batch_size, width, height, channel] and input_target in [batch_size, forward_layers[-1]].
 test function returns test input's loss value without updating parameters.
 
