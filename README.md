@@ -8,9 +8,9 @@ tensorflow 1.12
 
 ## Usage
 1. Import models.py
-'''
+    ~~~
     import models
-'''
+    ~~~
 2. Create an RCNN object
 
     rcnn = models.RCNN(batch_size=128, 
