@@ -2,9 +2,9 @@
 Recurrent Convolutional Neural Network (RCNN) implementation using python-tensorflow.
 
 ## Library versions
-python 2.7
-numpy 1.12
-tensorflow 1.12
+python 2.7  
+numpy 1.12  
+tensorflow 1.12 
 
 ## Usage
 1. Import models.py
@@ -42,7 +42,7 @@ tensorflow 1.12
     ```
     model.train(data=train_input, target=input_target) 
     ```
-train_input should be in shape [batch_size, width, height, channel] and input_target in [batch_size, forward_layers[-1]].
+train_input should be in shape [batch_size, width, height, channel] and input_target in [batch_size, forward_layers[-1]].  
 train function returns loss value.
 
 4. Test
@@ -50,12 +50,15 @@ train function returns loss value.
   ```
   model.test(data=test_input, target=test_target)
   ```
-train_input should be in shape [batch_size, width, height, channel] and input_target in [batch_size, forward_layers[-1]].
+train_input should be in shape [batch_size, width, height, channel] and input_target in [batch_size, forward_layers[-1]].  
 test function returns test input's loss value without updating parameters.
 
-5. Reconstruct
-If you want to get the output value of your model, use reconstruct().
-  model.reconstrut(data=test_input)
+
+5. Reconstruct  
+
+    ```
+    model.reconstrut(data=test_input)
+    ```
 This returns the output values.
 
 6. Save and load the model.
