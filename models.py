@@ -319,7 +319,7 @@ class RCNN(object):
         self.batch_size = batch_size
         self.width = width
         self.height = height
-        self.channels = channels
+        self.channel = channel
         self.filters = filters
         self.rrcl_iter = rrcl_iter
         self.conv_num = conv_num
@@ -331,7 +331,7 @@ class RCNN(object):
         self.keep_probs = keep_probs
         self.use_dropout = not (keep_probs == None or keep_probs == [1.0 for i in range(len(keep_probs))])
         if keep_probs == None:
-            self.keep_probs = [1.0 for i in range(1+rrcl_num+len(forward_layers)-1)]
+            self.keep_probs = [1.0 for i in range(1+conv_num+len(forward_layers)-1)]
         if self.use_dropout and len(keep_probs) != (conv_num + len(forward_layers)-1):
             raise ValueError('Parameter \'keep_probs\' length is wrong.')
         self.std = std
